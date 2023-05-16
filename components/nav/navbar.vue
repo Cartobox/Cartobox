@@ -1,21 +1,23 @@
 <template>
-    <nav class="noselect">
-        <div id="logo-area">
-            <img src="@/static/logo.svg" alt="">
-        </div>
-        <div id="mobile-menu">
-            <img src="@/static/menu-icon.svg" alt="" @click="toggleMobile">
-        </div>
-        <div id="nav-area" :class="{menuOpen: MobileIsActive}">
-            <div class="pages">
-                <span>Inicio</span>
-                <span>Quem somos</span>
-                <span>Produtos</span>
-                <span>Contacto</span>
+    <div id="navContainer">
+        <nav class="noselect" :class="{scrolled: scrolledDown}">
+            <div id="logo-area">
+                <img src="@/static/logo.svg" alt="">
             </div>
-        </div>
-        
-    </nav>
+            <div id="mobile-menu">
+                <img src="@/static/menu-icon.svg" alt="" @click="toggleMobile">
+            </div>
+            <div id="nav-area" :class="{menuOpen: MobileIsActive}">
+                <div class="pages">
+                    <span>Inicio</span>
+                    <span>Quem somos</span>
+                    <span>Produtos</span>
+                    <span>Contacto</span>
+                </div>
+            </div>
+            
+        </nav>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -25,23 +27,46 @@
         MobileIsActive.value = !MobileIsActive.value;
     }
 
+    const scrolledDown = ref(false);
+
+    onMounted(() => {
+        document.addEventListener("scroll", () => {
+            const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (scroll > 150) scrolledDown.value = true;
+            else scrolledDown.value = false;
+        })
+    })
+
 </script>
 
 <style scoped lang="scss">
+    #navContainer {
+        height: 90px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
 
     nav {
         display: grid;
         grid-template-columns: auto 1fr;
-        position: sticky;
-        top: 0;
-        left: 0;
+        
         width: 100%;
         height: var(--navH);
         background: rgb(255, 255, 255);
 
         padding-inline: var(--padding);
+        transition: var(--transIn);
         
-        z-index: 100;
+        &.scrolled {
+            --navH: 70px;
+            -webkit-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+            -moz-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+            box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+        }
     }
 
     #nav-area, #logo-area, #mobile-menu {
@@ -91,6 +116,10 @@
 
                 transform: scaleY(1);
                 transition: var(--transOut);
+
+                -webkit-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+                -moz-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+                box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
 
                 span {
                     display: block;
