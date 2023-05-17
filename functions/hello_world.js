@@ -1,4 +1,4 @@
-const { json } = require("stream/consumers")
+/*const { json } = require("stream/consumers")
 
 const nodemailer = require("nodemailer");
 require('dotenv').config();
@@ -43,4 +43,40 @@ exports.handler = async function(event, contexct) {
             message: "hello world " + process.env.EMAIL
         })
     }
-}
+}*/
+
+const nodemailer = require("nodemailer");
+
+exports.handler = async (event, context, callback) => {
+
+    const transporter = nodemailer.createTransport({
+        host: "smtp.ptempresas.pt",
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
+        }
+    });
+
+    let info = await transporter.sendMail({
+        from: `"My Name 👻" <${process.env.EMAIL}>`,
+        to: `${process.env.EMAIL}`,
+        subject: "Hello ✔",
+        text: "Hello world?",
+        html: "<b>Hello world?</b>",
+    });
+
+    
+    if (info.messageId) {
+        return {
+            statusCode: 200,
+            body: nodemailer.getTestMessageUrl(info)
+        }
+    }
+  
+    return {
+        statusCode: 400,
+        body: "Oops"
+    }
+};
