@@ -4,6 +4,7 @@
         <IndexVantagens></IndexVantagens>
         <IndexSobreoCartao></IndexSobreoCartao>
         <IndexProdutos></IndexProdutos>
+        <IndexMap></IndexMap>
     </div>
 </template>
 

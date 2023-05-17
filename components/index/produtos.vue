@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section ref="sec" id="produtos">
         <img src="@/assets/wave1.svg" alt="" id="bottomTransition">
         <h2>Conheça os nossos produtos</h2>
 
@@ -19,6 +19,10 @@
 </template>
 
 <script setup lang="ts">
+    import { useMainStore } from '@/stores/main'
+    const store = useMainStore()
+
+
     let scrolled = ref(0)
 
     let carrouselContainer = ref(null);

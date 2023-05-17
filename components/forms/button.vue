@@ -1,10 +1,14 @@
 <template>
-    <div class="btn">
+    <div class="btn" @click="closeModal()">
         <slot></slot>
     </div>
 </template>
 
 <script setup lang="ts">
+    import { useMainStore } from '@/stores/main'
+    const store = useMainStore()
+
+    const closeModal = () => store.showContactModal = true;
 
 </script>
 

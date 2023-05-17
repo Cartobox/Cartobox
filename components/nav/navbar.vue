@@ -2,17 +2,17 @@
     <div id="navContainer">
         <nav class="noselect" :class="{scrolled: scrolledDown}">
             <div id="logo-area">
-                <img src="@/static/logo.svg" alt="">
+                <img src="@/static/logo.svg" alt="" @click="navigateTo('/')">
             </div>
             <div id="mobile-menu">
                 <img src="@/static/menu-icon.svg" alt="" @click="toggleMobile">
             </div>
             <div id="nav-area" :class="{menuOpen: MobileIsActive}">
-                <div class="pages">
-                    <span>Inicio</span>
-                    <span>Quem somos</span>
-                    <span>Produtos</span>
-                    <span>Contacto</span>
+                <div class="pages" @click="MobileIsActive = false">
+                    <span><NuxtLink to="/">Inicio</NuxtLink></span>
+                    <span><NuxtLink to="/sobrenos">Quem somos</NuxtLink></span>
+                    <span><NuxtLink to="/#produtos">Produtos</NuxtLink></span>
+                    <span @click="togglecontactform()">Contacto</span>
                 </div>
             </div>
             
@@ -21,6 +21,13 @@
 </template>
 
 <script setup lang="ts">
+    import { useMainStore } from '@/stores/main'
+    const store = useMainStore()
+
+
+
+    const togglecontactform = () => store.showContactModal = true;
+
     const MobileIsActive = ref(false);
 
     const toggleMobile = () => {
@@ -33,10 +40,12 @@
         document.addEventListener("scroll", () => {
             const scroll = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if (scroll > 150) scrolledDown.value = true;
+            if (scroll > 50) scrolledDown.value = true;
             else scrolledDown.value = false;
         })
     })
+
+    const route = useRoute()
 
 </script>
 
@@ -47,6 +56,10 @@
         top: 0;
         left: 0;
         z-index: 100;
+    }
+
+    a {
+        all: unset;
     }
 
 
@@ -124,6 +137,12 @@
                 span {
                     display: block;
                     font-size: 2rem;
+                    width: 100%;
+
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                    }
 
                     margin-top: .7em;
                 }
@@ -139,7 +158,7 @@
             display: block;
             width: auto;
             height: 90%;
-            pointer-events: none;
+           
             cursor: pointer;
         }
     }
