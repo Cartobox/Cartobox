@@ -166,6 +166,8 @@
 </template>
 
 <script setup lang="ts">
+    import axios from "axios"
+
     import { useMainStore } from '@/stores/main'
     const store = useMainStore()
 
@@ -179,7 +181,13 @@
         await new Promise((r) => setTimeout(r, 1000))
         submitted.value = true
 
-        console.log(data)
+        axios.post('/.netlify/functions/sendEmail', data)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
     
 </script>

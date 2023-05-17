@@ -21,6 +21,7 @@
     "@formkit/themes": "^0.17.0",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.10",
+    "axios": "^1.4.0",
     "nodemailer": "^6.9.2",
     "pinia": "^2.0.36",
     "sass": "^1.62.1"
