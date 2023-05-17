@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
     useSeoMeta({
-        title: 'Cartobox',
         ogTitle: 'Na Cartobox fazemos as melhores caixas em cartão para o seu negócio',
         description: 'Somos especialistas em todo tipo de caixas de cartão canelado, produzindo caixas que são a cara do seu negócio, com as suas medidas e impressão customizados!',
         ogDescription: 'Somos especialistas em todo tipo de caixas de cartão canelado, produzindo caixas que são a cara do seu negócio, com as suas medidas e impressão customizados!',

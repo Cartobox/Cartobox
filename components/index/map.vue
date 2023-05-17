@@ -24,6 +24,8 @@
     let map: any = null;
 
     onMounted(() => {
+        
+        
         setTimeout(() => {
             console.log("loaded map")
             useHead({
@@ -39,6 +41,7 @@
             });
         
             setTimeout(() => {
+                console.log("Load Map F")
                 // @ts-ignore
                 var platform = new H.service.Platform({
                 apikey: "ae9oWQ89WX8cjdDfPY7edcK8mxsdbjX2Eo4rbHS4A4s"
@@ -68,9 +71,13 @@
 
                 // Now use the map as required...
                 addMarkersToMap(map);
-            }, 2000);
-        }, 500);
+                map.getViewPort().resize();
+            }, 1300);
+        }, 1000);
     })
+
+    
+
 
     ///Toggle map
     const showMap = ref(false)
