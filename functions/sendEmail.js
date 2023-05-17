@@ -49,7 +49,16 @@ const nodemailer = require("nodemailer");
 const { json } = require("stream/consumers");
 
 exports.handler = async (event, context, callback) => {
-    const data = JSON.parse(event.body);
+    let data =  {}
+    try {
+        data = JSON.parse(event.body)
+    } catch {
+        return {
+            statusCode: 500,
+            body: "Oops"
+        }
+    }
+
 
     const error = false;
 

@@ -167,6 +167,9 @@
 
 <script setup lang="ts">
     import axios from "axios"
+    import { setErrors, clearErrors } from '@formkit/core'
+    
+
 
     import { useMainStore } from '@/stores/main'
     const store = useMainStore()
@@ -177,6 +180,7 @@
     const hideContactForm = () => store.showContactModal = false;
 
     const submitHandler = async (data: any) => {
+        clearErrors("form");
         // Let's pretend this is an ajax request:
         await new Promise((r) => setTimeout(r, 1000))
         submitted.value = true
@@ -186,9 +190,12 @@
             console.log(response);
         })
         .catch(function (error) {
-            console.log(error);
+            setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {
+            })
+            
         });
     }
+
     
 </script>
 
