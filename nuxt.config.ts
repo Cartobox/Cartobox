@@ -21,6 +21,11 @@ export default defineNuxtConfig({
             ]
         }
     },
+
+    sitemap: {
+        siteUrl: 'https://cartobox.pt/',
+    },
+
     modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap'],
     
 })
