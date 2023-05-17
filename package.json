@@ -3,13 +3,14 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev & netlify dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@types/node": "^18",
+    "netlify-cli": "^15.1.1",
     "nuxt": "^3.4.3",
     "nuxt-simple-robots": "^2.3.0",
     "nuxt-simple-sitemap": "^2.5.0"
@@ -20,6 +21,7 @@
     "@formkit/themes": "^0.17.0",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.10",
+    "nodemailer": "^6.9.2",
     "pinia": "^2.0.36",
     "sass": "^1.62.1"
   }

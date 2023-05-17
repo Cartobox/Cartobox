@@ -23,61 +23,55 @@
 
     let map: any = null;
 
+    useHead(
+        {
+        script: [
+            {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js", defer: "true"},
+            {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js", defer: "true"},
+            {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js", defer: "true"},
+            {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js", defer: "true"}
+        ],
+        link: [
+            { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
+        ]
+    }
+    )
+
     onMounted(() => {
         
-        
-        setTimeout(() => {
-            console.log("loaded map")
-            useHead({
-                script: [
-                    {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js"},
-                    {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js"},
-                    {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js"},
-                    {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"}
-                ],
-                link: [
-                    { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
-                ]
-            });
-        
-            setTimeout(() => {
-                console.log("Load Map F")
-                // @ts-ignore
-                var platform = new H.service.Platform({
-                apikey: "ae9oWQ89WX8cjdDfPY7edcK8mxsdbjX2Eo4rbHS4A4s"
-                });
-                var defaultLayers = platform.createDefaultLayers();
+        // @ts-ignore
+        let platform = new H.service.Platform({
+            apikey: "ae9oWQ89WX8cjdDfPY7edcK8mxsdbjX2Eo4rbHS4A4s",
+        });
 
-                //Step 2: initialize a map - this map is centered over Europe
-                // @ts-ignore
-                map = new H.Map(mapEl.value,
-                defaultLayers.vector.normal.map,{
-                center: {lat:39.68459645685661, lng:-8.972051690212194},
-                zoom: 9,
-                pixelRatio: window.devicePixelRatio || 1
-                });
-                // add a resize listener to make sure that the map occupies the whole container
-                window.addEventListener('resize', () => map.getViewPort().resize());
+        let defaultLayers = platform.createDefaultLayers();
 
-                //Step 3: make the map interactive
-                // MapEvents enables the event system
-                // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
-                // @ts-ignore
-                var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+        // @ts-ignore
+        map = new H.Map(document.getElementById('map'),
+            defaultLayers.vector.normal.map,{
+            center: {lat:39.6845303306826, lng:-8.97210535464627},
+            zoom: 12,
+            pixelRatio: window.devicePixelRatio || 1
+        });
 
-                // Create the default UI components
-                // @ts-ignore
-                var ui = H.ui.UI.createDefault(map, defaultLayers);
+        window.addEventListener('resize', () => map.getViewPort().resize());
 
-                // Now use the map as required...
-                addMarkersToMap(map);
-                map.getViewPort().resize();
-            }, 1300);
-        }, 1000);
+        // @ts-ignore
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+        // @ts-ignore
+        var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+        var LocationOfMarker = {lat:39.6845303306826, lng:-8.97210535464627};
+        // @ts-ignore
+        var icon = new H.map.Icon('/marker.svg');
+        // @ts-ignore
+        var marker = new H.map.Marker(LocationOfMarker, { icon: icon });
+
+        // Add the marker to the map:
+        map.addObject(marker);
+
     })
-
-    
-
 
     ///Toggle map
     const showMap = ref(false)
