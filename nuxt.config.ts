@@ -17,6 +17,7 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'Na Cartobox somos especialistas em cartas de cartão feitas a pensar especificamente no seu negócio.' },
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade' },
                 { name: 'HandheldFriendly', content: 'true' },
+                { name: 'handheld-friendly', content: 'true' },
             ],
             htmlAttrs: {
                 lang: "pt"
