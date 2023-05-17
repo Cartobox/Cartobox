@@ -4,7 +4,7 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            title: "Cartobox - Temos as melhores caixas para o seu negócio!",
+            title: "Cartobox | Caixas que são a cara do seu negócio!",
             script: [
                 {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js"},
                 {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js"},
@@ -26,6 +26,6 @@ export default defineNuxtConfig({
         siteUrl: 'https://cartobox.pt/',
     },
 
-    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap'],
+    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', '@nuxtjs/robots'],
     
 })
