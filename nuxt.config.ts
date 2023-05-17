@@ -10,6 +10,7 @@ export default defineNuxtConfig({
                 { rel: 'apple-touch-icon', sizes: '72x72' ,href: '/apple-touch-72.png' },
                 { rel: 'apple-touch-icon', sizes: '114x114' ,href: '/apple-touch-114.png' },
                 { rel: 'apple-touch-icon', sizes: '144x144' ,href: '/apple-touch-144.png' },
+                { rel: 'apple-touch-startup-image', href: '/apple-touch-144.png' },
                 { rel: 'icon', type: 'image/png', href: '/favicon.png' },
                 { rel: 'canonical',  href: 'https://cartobox.pt/' },
             ],
