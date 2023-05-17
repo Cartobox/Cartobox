@@ -40,7 +40,7 @@ exports.handler = async function(event, contexct) {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            message: "hello world"
+            message: "hello world " + process.env.EMAIL
         })
     }
 }
