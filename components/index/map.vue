@@ -24,36 +24,52 @@
     let map: any = null;
 
     onMounted(() => {
-        console.log("start")
-        // @ts-ignore
-        var platform = new H.service.Platform({
-        apikey: "ae9oWQ89WX8cjdDfPY7edcK8mxsdbjX2Eo4rbHS4A4s"
-        });
-        var defaultLayers = platform.createDefaultLayers();
+        setTimeout(() => {
+            console.log("loaded map")
+            useHead({
+                script: [
+                    {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js"},
+                    {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js"},
+                    {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js"},
+                    {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"}
+                ],
+                link: [
+                    { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
+                ]
+            });
+        
+            setTimeout(() => {
+                // @ts-ignore
+                var platform = new H.service.Platform({
+                apikey: "ae9oWQ89WX8cjdDfPY7edcK8mxsdbjX2Eo4rbHS4A4s"
+                });
+                var defaultLayers = platform.createDefaultLayers();
 
-        //Step 2: initialize a map - this map is centered over Europe
-        // @ts-ignore
-        map = new H.Map(mapEl.value,
-        defaultLayers.vector.normal.map,{
-        center: {lat:39.68459645685661, lng:-8.972051690212194},
-        zoom: 9,
-        pixelRatio: window.devicePixelRatio || 1
-        });
-        // add a resize listener to make sure that the map occupies the whole container
-        window.addEventListener('resize', () => map.getViewPort().resize());
+                //Step 2: initialize a map - this map is centered over Europe
+                // @ts-ignore
+                map = new H.Map(mapEl.value,
+                defaultLayers.vector.normal.map,{
+                center: {lat:39.68459645685661, lng:-8.972051690212194},
+                zoom: 9,
+                pixelRatio: window.devicePixelRatio || 1
+                });
+                // add a resize listener to make sure that the map occupies the whole container
+                window.addEventListener('resize', () => map.getViewPort().resize());
 
-        //Step 3: make the map interactive
-        // MapEvents enables the event system
-        // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
-        // @ts-ignore
-        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+                //Step 3: make the map interactive
+                // MapEvents enables the event system
+                // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+                // @ts-ignore
+                var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
-        // Create the default UI components
-        // @ts-ignore
-        var ui = H.ui.UI.createDefault(map, defaultLayers);
+                // Create the default UI components
+                // @ts-ignore
+                var ui = H.ui.UI.createDefault(map, defaultLayers);
 
-        // Now use the map as required...
-        addMarkersToMap(map);
+                // Now use the map as required...
+                addMarkersToMap(map);
+            }, 1000);
+        }, 500);
     })
 
     ///Toggle map

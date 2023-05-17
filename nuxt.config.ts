@@ -6,13 +6,9 @@ export default defineNuxtConfig({
             viewport: 'width=device-width, initial-scale=1',
             title: "Cartobox | Caixas que são a cara do seu negócio!",
             script: [
-                {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js"},
-                {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js"},
-                {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js"},
-                {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"}
+                
             ],
             link: [
-                { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
                 { rel: 'icon', type: 'image/png', href: '/favicon.png' },
             ],
             meta: [
@@ -25,7 +21,10 @@ export default defineNuxtConfig({
     sitemap: {
         siteUrl: 'https://cartobox.pt/',
     },
+    robots: {
+        siteUrl: 'https://cartobox.pt/',
+    },
 
-    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', '@nuxtjs/robots'],
+    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', 'nuxt-simple-robots'],
     
 })
