@@ -68,7 +68,7 @@
 
                 // Now use the map as required...
                 addMarkersToMap(map);
-            }, 1000);
+            }, 2000);
         }, 500);
     })
 
