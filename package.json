@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.4.3"
+    "nuxt": "^3.4.3",
+    "nuxt-simple-sitemap": "^2.5.0"
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.5.3",

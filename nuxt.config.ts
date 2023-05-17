@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
     app: {
         head: {
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            title: "Cartobox - Temos as melhores caixas para o seu negócio!",
             script: [
                 {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js"},
                 {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js"},
@@ -10,10 +13,14 @@ export default defineNuxtConfig({
             ],
             link: [
                 { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
-
+                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
             ],
+            meta: [
+                { name: 'description', content: 'Na Cartobox somos especialistas em cartas de cartão feitas a pensar especificamente no seu negócio.' },
+                { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade' },
+            ]
         }
     },
-    modules: ['@pinia/nuxt', '@formkit/nuxt'],
+    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap'],
     
 })

@@ -93,7 +93,6 @@
                                 'Cartão Largo Castanho',
                                 'Carão Duplo Castanho/branco',
                             ]"
-                            v-model="assunto"
                         />
                         
                         <FormKit
