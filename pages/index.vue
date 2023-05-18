@@ -13,7 +13,7 @@
         ogTitle: 'Na Cartobox fazemos as melhores caixas em cartão para o seu negócio',
         description: 'Somos especialistas em todo tipo de caixas de cartão canelado, produzindo caixas que são a cara do seu negócio, com as suas medidas e impressão customizados!',
         ogDescription: 'Somos especialistas em todo tipo de caixas de cartão canelado, produzindo caixas que são a cara do seu negócio, com as suas medidas e impressão customizados!',
-        ogImage: 'https://cartobox.pt/_nuxt/ogImage.png',
+        ogImage: '/ogImage.png',
         twitterCard: 'summary_large_image',
         ogUrl: 'https://cartobox.pt/',
         ogType: "website",

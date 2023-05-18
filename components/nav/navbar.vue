@@ -9,9 +9,9 @@
             </div>
             <div id="nav-area" :class="{menuOpen: MobileIsActive}">
                 <div class="pages" @click="MobileIsActive = false">
-                    <span><NuxtLink to="/">Inicio</NuxtLink></span>
-                    <span><NuxtLink to="/sobrenos">Quem somos</NuxtLink></span>
-                    <span><NuxtLink to="/#produtos">Produtos</NuxtLink></span>
+                    <span :class="{active: route.path === '/'}"><NuxtLink to="/">Inicio</NuxtLink></span>
+                    <span :class="{active: route.path === '/sobrenos'}"><NuxtLink to="/sobrenos" >Quem somos</NuxtLink></span>
+                    <span :class="{active: route.path === '/#produtos'}"><NuxtLink to="/#produtos" >Produtos</NuxtLink></span>
                     <span @click="togglecontactform()">Contacto</span>
                 </div>
             </div>
@@ -23,8 +23,6 @@
 <script setup lang="ts">
     import { useMainStore } from '@/stores/main'
     const store = useMainStore()
-
-
 
     const togglecontactform = () => store.showContactModal = true;
 
