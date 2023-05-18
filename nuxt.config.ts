@@ -38,6 +38,20 @@ export default defineNuxtConfig({
     gtag: {
         id: process.env.ANALYTICSID
     },
+    ogImage: {
+        host: 'https://cartobox.pt/'
+    },
+
+
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: [
+                '/',
+                '/sobrenos'
+            ]
+        }
+    },
 
     modules: [
         '@pinia/nuxt', 
