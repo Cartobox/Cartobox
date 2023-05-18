@@ -21,7 +21,10 @@
         ogLocale: "pt_PT"
     })
 
-    defineOgImageScreenshot();
+    defineOgImageStatic({
+        title: 'Cartobox | Caixas que são a cara da sua empresa!',
+        background: '#00A3D4'
+    })
 </script>
 
 <style scoped lang="scss">
