@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     runtimeConfig: {
-        baseURL: process.env.NUXT_BASE_URL
+        baseURL: process.env.NUXT_BASE_URL + "/assets/ogImage.png"
     },
     app: {
         head: {
@@ -22,12 +22,6 @@ export default defineNuxtConfig({
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade,cartobox,negócio' },
                 { name: 'HandheldFriendly', content: 'true' },
                 { name: 'handheld-friendly', content: 'true' },
-
-                { 
-                    hid: 'og:image',
-                    property: 'og:image',
-                    content: '/ogImage.jpg',
-                },
             ],
             htmlAttrs: {
                 lang: "pt"
@@ -45,6 +39,13 @@ export default defineNuxtConfig({
         id: process.env.ANALYTICSID
     },
 
-    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', 'nuxt-simple-robots', 'nuxt-gtag'],
+    modules: [
+        '@pinia/nuxt', 
+        '@formkit/nuxt', 
+        'nuxt-simple-sitemap', 
+        'nuxt-simple-robots', 
+        'nuxt-gtag',
+        'nuxt-og-image'
+    ],
     
 })
