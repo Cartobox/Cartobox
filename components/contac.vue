@@ -143,7 +143,7 @@
                 <div class="item">
                     <img src="@/assets/icons/location.svg" alt="">
                     <span>                
-                        Rua da Forcada, <br/>
+                        <b>Morada:</b> Rua da Forcada, <br/>
                         S/N, Calços <br/>
                         2445-712 Martingança
                     </span>
@@ -151,13 +151,14 @@
                 <div class="item">
                     <img src="@/assets/icons/phone.svg" alt="">
                     <span>                
-                        Telefone: 244 000 000
+                        <b>Telefone:</b> 244 545 380 <br/>
+                        <b>Telemóvel:</b> 960 364 411
                     </span>
                 </div>
                 <div class="item">
                     <img src="@/assets/icons/send.svg" alt="">
                     <span>                
-                        Email: comercial@cartobox.pt
+                        <b>Email:</b> comercial@cartobox.pt
                     </span>
                 </div>
             </section>
@@ -372,6 +373,7 @@
                 color: #fff;
                 align-items: center;
                 width: max-content;
+                font-weight: 100;
 
                 @media (max-width: 1100px) {
                     width: auto;

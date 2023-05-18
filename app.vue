@@ -3,7 +3,7 @@
     <NavNavbar></NavNavbar>
     <NuxtPage></NuxtPage>
     <NavFooter></NavFooter>
-
+    <NavPortugal2020></NavPortugal2020>
 
     <Contac></Contac>
   </div>

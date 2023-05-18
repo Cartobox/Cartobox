@@ -32,7 +32,10 @@ export default defineNuxtConfig({
     robots: {
         siteUrl: 'https://cartobox.pt/',
     },
+    gtag: {
+        id: process.env.ANALYTICSID
+    },
 
-    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', 'nuxt-simple-robots'],
+    modules: ['@pinia/nuxt', '@formkit/nuxt', 'nuxt-simple-sitemap', 'nuxt-simple-robots', 'nuxt-gtag'],
     
 })

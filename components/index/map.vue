@@ -5,12 +5,16 @@
             <img src="@/assets/map.svg" alt="" @click="showMapEl" v-show="!showMap">
         </section>
         <div id="map" ref="mapEl" :class="{hideMap: !showMap}">
+            <img src="@/map_img.png" alt="" v-show="false" ref="mapImg">
             <div id="blend"></div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+    const mapImg = ref(null);
+
+
     // @ts-ignore
     function addMarkersToMap(map: any) {
         // @ts-ignore
@@ -18,6 +22,32 @@
         map.addObject(parisMarker);
 
     }
+
+    function addOverlayToMap(map: any) {
+        var imgCounter = 0;
+
+        // create an overlay that will use a weather map as a bitmap
+        // @ts-ignore
+        var overlay = new H.map.Overlay(
+            // @ts-ignore
+            new H.geo.Rect(
+                39.684364904101805, -8.972017515383158,
+                39.68411391847231, -8.971576238036064
+            ),
+
+            rainRadar[imgCounter],
+            {
+            // the bitmap is frequently updated mark the object as volatile
+            volatility: false
+            }
+        );
+
+        
+
+        // add overlay to the map
+        map.addObject(overlay);
+    }
+
     const mapEl = ref(null)
         
 
@@ -25,16 +55,16 @@
 
     useHead(
         {
-        script: [
-            {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js", defer: "true"},
-            {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js", defer: "true"},
-            {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js", defer: "true"},
-            {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js", defer: "true"}
-        ],
-        link: [
-            { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
-        ]
-    }
+            script: [
+                {src: "https://js.api.here.com/v3/3.1/mapsjs-core.js", defer: "true"},
+                {src: "https://js.api.here.com/v3/3.1/mapsjs-service.js", defer: "true"},
+                {src: "https://js.api.here.com/v3/3.1/mapsjs-ui.js", defer: "true"},
+                {src: "https://js.api.here.com/v3/3.1/mapsjs-mapevents.js", defer: "true"}
+            ],
+            link: [
+                { rel: 'stylesheet', href: 'https://js.api.here.com/v3/3.1/mapsjs-ui.css' },
+            ]
+        }
     )
 
     onMounted(() => {
@@ -50,7 +80,7 @@
         map = new H.Map(document.getElementById('map'),
             defaultLayers.vector.normal.map,{
             center: {lat:39.6845303306826, lng:-8.97210535464627},
-            zoom: 12,
+            zoom: 14,
             pixelRatio: window.devicePixelRatio || 1
         });
 
@@ -71,7 +101,12 @@
         // Add the marker to the map:
         map.addObject(marker);
 
+
+        rainRadar.push(mapImg.value);
+
+        addOverlayToMap(map);
     })
+    var rainRadar: any = [];
 
     ///Toggle map
     const showMap = ref(false)

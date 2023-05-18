@@ -3,7 +3,7 @@
         
         <div id="topTransition"></div>
        
-        <h2>Um pouco sobre o cartão canelado</h2>
+        <h2>O que precisas de saber sobre o cartão canelado</h2>
         <p>O papel conhecido como cartão canelado é um tipo mais espesso e resistente, que é comumente utilizado na conceção de caixas, podendo ter uma superfície lisa ou ondulada. Este material é produzido a partir de fibras de celulose, que podem ser virgens ou recicladas.</p>
         <p>Devido à sua natureza reciclável, o cartão canelado e os seus produtos derivados frequentemente passam por processos de reciclagem, que envolvem toda uma indústria, desde a coleta até a logística e o reprocessamento nas indústrias de produção de papel e cartão.</p>
         <p>Embora tenha sido criado na Inglaterra em 1856, inicialmente como revestimento para cartolas altas, o cartão canelado só foi patenteado e utilizado como material de transporte em 20 de dezembro de 1871.</p>
@@ -50,6 +50,7 @@
         font-weight: 400;
         margin-top: 3em;
         line-height: 1.5;
+        font-size: 1.3em;
 
         @media (max-width: 800px) {
             margin-top: 2em;

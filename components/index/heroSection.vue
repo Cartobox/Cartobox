@@ -5,10 +5,10 @@
             <img src="@/assets/man-holding-boxes.png" alt="" class="hero">
         </div>
         <div id="info-container">
-            <h1>Precisa de uma caixa à medida do seu negócio?</h1>
+            <h1>Encaixe o seu negócio à sua medida</h1>
             <h4>Na cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada caixa.</h4>
         </div>
-        <FormsButton>Fale connosco</FormsButton>
+        <FormsButton>Faça a sua caixa</FormsButton>
     </section>
 </template>
 
@@ -61,9 +61,12 @@
     }
 
     h1 {
+        padding-top: 4rem;
         @media (max-width: 950px) {
             text-align: center;
             font-size: 3em;
+
+            padding-top: 1rem;
         }
 
         @media (max-width: 650px) {

@@ -8,9 +8,9 @@
             </div>
             <div class="item">
                 <h4>contactos</h4>
-                <p>200 000 000</p>
+                <p>244 545 380</p>
                 <p class="small">(chamada fixa nacional)</p>
-                <p>910 000 000</p>
+                <p>960 364 411</p>
                 <p>comercial@cartobox.pt</p>
             </div>
             <div class="item">
@@ -19,6 +19,7 @@
                     S/N, Calços <br/>
                     2445-712 Martingança
                 </p>
+                <p class="small top-4">(39.68440, -8.97201)</p>
             </div>
         </div>
         <div id="policy">
@@ -32,11 +33,14 @@
             </div>
             <div class="item">
                 <div class="wrapper">
-                    <img src="@/assets/icons/linkedIn.svg" alt="">
-                    <img src="@/assets/icons/facebook.svg" alt="">
-                    <img src="@/assets/icons/instagram.svg" alt="">
+                    <a href="https://www.facebook.com/profile.php?id=100092847426863" target="_blank"><img src="@/assets/icons/linkedIn.svg" alt="LinkedIn"/></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092847426863" target="_blank"><img src="@/assets/icons/facebook.svg" alt="Facebook"/></a>
+                    <a href="https://www.instagram.com/cartobox.lda/" target="_blank"><img src="@/assets/icons/instagram.svg" alt="Instagram"/></a>
                 </div>
             </div>
+        </div>
+        <div id="portugal2020">
+            
         </div>
     </section>
 </template>
@@ -46,6 +50,12 @@
 </script>
 
 <style scoped lang="scss">
+    
+
+    .top-4 {
+        margin-top: .4em !important;
+    }
+
     a {
         all: unset;
     }
@@ -99,11 +109,11 @@
 
             img {
                 max-width: 25px;
-                cursor: pointer;
+                cursor: pointer;              
+            }
 
-                &:not(:last-child) {
-                    margin-right: 1em;
-                }
+            a:not(:last-child) {
+                margin-right: 1em;
             }
         }
     }
