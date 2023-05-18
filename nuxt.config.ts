@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    runtimeConfig: {
+        baseURL: process.env.NUXT_BASE_URL
+    },
     app: {
         head: {
             charset: 'utf-8',
@@ -19,10 +22,16 @@ export default defineNuxtConfig({
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade,cartobox,negócio' },
                 { name: 'HandheldFriendly', content: 'true' },
                 { name: 'handheld-friendly', content: 'true' },
+
+                { 
+                    hid: 'og:image',
+                    property: 'og:image',
+                    content: '/ogImage.jpg',
+                },
             ],
             htmlAttrs: {
                 lang: "pt"
-            }
+            },
         }
     },
 
