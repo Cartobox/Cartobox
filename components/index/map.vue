@@ -5,7 +5,7 @@
             <img src="@/assets/map.svg" alt="" @click="showMapEl" v-show="!showMap">
         </section>
         <div id="map" ref="mapEl" :class="{hideMap: !showMap}">
-            <img src="@/map_img.png" alt="" v-show="false" ref="mapImg">
+            <img src="/map_img.png" alt="" v-show="false" ref="mapImg">
             <div id="blend"></div>
         </div>
     </div>
