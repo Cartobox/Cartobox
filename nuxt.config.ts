@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     },
 
 
-    /*nitro: {
+    nitro: {
         prerender: {
             crawlLinks: true,
             routes: [
@@ -51,7 +51,7 @@ export default defineNuxtConfig({
                 '/sobrenos'
             ]
         }
-    },*/
+    },
 
     modules: [
         '@pinia/nuxt', 

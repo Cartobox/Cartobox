@@ -12,6 +12,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 1200px;
+    min-height: 630px;
     height: 100%;
     background: #018bb5;
     justify-content: center;
