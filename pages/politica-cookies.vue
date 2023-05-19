@@ -23,6 +23,10 @@
         ogType: "website",
         ogLocale: "pt_PT"
     })
+
+    defineOgImageStatic({
+        component: 'MyOgImage',
+    })
 </script>
 
 <style scoped lang="scss">
