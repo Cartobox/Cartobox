@@ -20,6 +20,11 @@
         ogType: "website",
         ogLocale: "pt_PT"
     })
+
+    defineOgImageStatic({
+        title: 'Welcome to my site!',
+        background: 'lightblue'
+    })
 </script>
 
 <style scoped lang="scss">
