@@ -82,6 +82,17 @@
 
                     <div id="orcamento" v-if="assunto === 'Pedido de orçamento'">
                         <FormKit
+                            type="text"
+                            name="modelo"
+                            label="Modelo"
+                            placeholder="Ex: 0207"
+                            validation="required"
+
+                            id="ModelosInput"
+                        />
+                        <span id="Modelos"><a href="https://www.fefco.org/sites/default/files/files/styles/thumbnail/public/FEFCO%20Code_WEBprotected.pdf" target="_blank">Selecione aqui um modelo</a></span>
+                        
+                        <FormKit
                             type="select"
                             label="Tipo de Cartão"
                             name="tipocartao"
@@ -115,7 +126,7 @@
                             type="number"
                             name="quantidade"
                             label="Quantidade"
-                            value="1000"
+                            value="500"
                             step="1"
                         />
                         
@@ -168,7 +179,7 @@
 
 <script setup lang="ts">
     import axios from "axios"
-    import { setErrors, clearErrors } from '@formkit/core'
+    import { setErrors, clearErrors, reset } from '@formkit/core'
     
 
 
@@ -180,6 +191,14 @@
 
     const hideContactForm = () => store.showContactModal = false;
 
+    watch(store, async (newV, oldV) => {
+        if (newV.showContactModal) {
+            document.body.style.overflow = 'hidden';
+            return;
+        }
+        document.body.style.overflow = 'visible';
+    });
+
     const submitHandler = async (data: any) => {
         clearErrors("form");
         // Let's pretend this is an ajax request:
@@ -188,11 +207,11 @@
 
         axios.post('/.netlify/functions/sendEmail', data)
         .then(function (response) {
-            console.log(response);
+            if (response.status === 200) reset("form");
         })
         .catch(function (error) {
             setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {
-            })
+        })
             
         });
     }
@@ -241,6 +260,25 @@
         }
     }
 
+    a {
+        all: unset;
+    }
+
+    #Modelos {
+        margin-bottom: 1em;
+        margin-top: .5em;
+        display: block;
+        font-size: 1em;
+        color: var(--firstColor);
+        cursor: pointer;
+        transition: var(--transIn);
+
+        &:hover {
+            color: var(--secondColor);
+            transition: var(--transOut);
+        }
+    }
+
     #bg {
         display: block;
         position: absolute;
@@ -258,6 +296,10 @@
         margin-top: 1em;
         margin-bottom: 1em;
         border-radius: .3em;
+
+        > :first-child {
+            margin-bottom: 0;
+        }
     }
 
     #main {
@@ -328,6 +370,7 @@
         @media (max-width: 1100px) {
             grid-template-columns: 1fr;
             overflow-y: scroll;
+            overscroll-behavior: none;
         }
 
         .left {

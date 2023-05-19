@@ -27,6 +27,8 @@ exports.handler = async (event, context, callback) => {
     const impressao = data.impressao || null
     const quantidade = data.quantidade || null
 
+    const modelo = data.modelo || null
+
     if (!senderEmail || !assunto || !nome || !empresa || !tel || !msg) error = true
     
 
@@ -56,6 +58,7 @@ exports.handler = async (event, context, callback) => {
             medidas: ${medidas}\n
             impressao: ${impressao}\n
             quantidade: ${quantidade}\n
+            modelo: ${modelo} \n
 
             \n\n
             ${msg}
@@ -74,6 +77,7 @@ exports.handler = async (event, context, callback) => {
             medidas: ${medidas}<br/>
             impressao: ${impressao}<br/>
             quantidade: ${quantidade}<br/>
+            modelo: ${modelo}<br/>
 
             <br/><br/>
             ${msg}
