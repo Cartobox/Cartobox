@@ -26,11 +26,7 @@
         ogLocale: "pt_PT"
     })
 
-    defineOgImageStatic({
-        component: 'MyOgImage',
-        width: 1200,
-        height: 630
-    })
+
 </script>
 
 <style scoped lang="scss">

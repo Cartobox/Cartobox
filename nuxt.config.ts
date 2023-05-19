@@ -22,10 +22,16 @@ export default defineNuxtConfig({
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade,cartobox,negócio' },
                 { name: 'HandheldFriendly', content: 'true' },
                 { name: 'handheld-friendly', content: 'true' },
+                {
+                    hid: 'og:image',
+                    name: 'og:image',
+                    content:'https://res.cloudinary.com/dpkreativ/image/upload/v1648291780/nuxt-open-graph-demo/1_Y8vXN1mJeEHyXWJtFICjiQ_gocqaf.jpg',
+                },
             ],
             htmlAttrs: {
                 lang: "pt"
             },
+            
         }
     },
 
@@ -37,9 +43,6 @@ export default defineNuxtConfig({
     },
     gtag: {
         id: process.env.ANALYTICSID
-    },
-    ogImage: {
-        host: 'https://cartobox.pt/'
     },
 
 
@@ -58,8 +61,7 @@ export default defineNuxtConfig({
         '@formkit/nuxt', 
         'nuxt-simple-sitemap', 
         'nuxt-simple-robots', 
-        'nuxt-gtag',
-        'nuxt-og-image'
+        'nuxt-gtag'
     ],
     
 })
