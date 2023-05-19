@@ -25,7 +25,7 @@ export default defineNuxtConfig({
                 {
                     hid: 'og:image',
                     name: 'og:image',
-                    content:'https://res.cloudinary.com/dpkreativ/image/upload/v1648291780/nuxt-open-graph-demo/1_Y8vXN1mJeEHyXWJtFICjiQ_gocqaf.jpg',
+                    content:'https://i.ibb.co/Wxh3JGQ/OGImage.png',
                 },
             ],
             htmlAttrs: {
