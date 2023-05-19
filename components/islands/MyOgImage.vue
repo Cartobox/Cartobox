@@ -11,8 +11,8 @@
   #container {
     display: flex;
     flex-direction: column;
-    width: 1200px;
-    height: 630px;
+    width: 100%;
+    height: 100%;
     background: #018bb5;
     justify-content: center;
     align-items: center;
