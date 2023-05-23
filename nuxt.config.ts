@@ -22,6 +22,7 @@ export default defineNuxtConfig({
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade,cartobox,negócio' },
                 { name: 'HandheldFriendly', content: 'true' },
                 { name: 'handheld-friendly', content: 'true' },
+                { name: 'google-site-verification', content: '-7Dl-O-m2Tbyl4LtAJzxhSgSqOggEi_yV3aHterWWCM' },
                 {
                     hid: 'og:image',
                     name: 'og:image',
