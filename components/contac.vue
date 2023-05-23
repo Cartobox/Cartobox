@@ -16,11 +16,6 @@
                     @submit="submitHandler"
                     :actions="false"
                     #default="{ value }"
-                    :config="{
-                        classes: {
-                        input: 'super-red',
-                        }
-                    }"
                 >
                     <FormKit
                         type="text"
@@ -90,7 +85,7 @@
 
                             id="ModelosInput"
                         />
-                        <span id="Modelos"><a href="https://www.fefco.org/sites/default/files/files/styles/thumbnail/public/FEFCO%20Code_WEBprotected.pdf" target="_blank">Selecione aqui um modelo</a></span>
+                        <span id="Modelos"><a href="https://www.fefco.org/sites/default/files/files/styles/thumbnail/public/FEFCO%20Code_WEBprotected.pdf" target="_blank">Verifique aqui os modelo disponíveis</a></span>
                         
                         <FormKit
                             type="select"
@@ -103,6 +98,7 @@
                                 'Fino com Kraft',
                                 'Cartão Largo Castanho',
                                 'Carão Duplo Castanho/branco',
+                                'Outro (indique na mensagem)'
                             ]"
                         />
                         
@@ -146,7 +142,7 @@
                     />
 
                 </FormKit>
-
+                
 
             </section>
             <section class="right">
@@ -156,7 +152,8 @@
                     <span>                
                         <b>Morada:</b> Rua da Forcada, <br/>
                         S/N, Calços <br/>
-                        2445-712 Martingança
+                        2445-712 Martingança <br/>
+                        <span class="small">(39.68440, -8.97201)</span>
                     </span>
                 </div>
                 <div class="item">
@@ -180,7 +177,7 @@
 <script setup lang="ts">
     import axios from "axios"
     import { setErrors, clearErrors, reset } from '@formkit/core'
-    
+
 
 
     import { useMainStore } from '@/stores/main'
@@ -262,6 +259,10 @@
 
     a {
         all: unset;
+    }
+
+    .small {
+        font-size: .6em !important;
     }
 
     #Modelos {

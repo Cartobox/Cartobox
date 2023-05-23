@@ -68,6 +68,8 @@
     )
 
     onMounted(() => {
+        try {
+
         
         // @ts-ignore
         let platform = new H.service.Platform({
@@ -105,6 +107,9 @@
         rainRadar.push(mapImg.value);
 
         addOverlayToMap(map);
+        } catch {
+            console.log("mapa")
+        }
     })
     var rainRadar: any = [];
 

@@ -1,17 +1,17 @@
 <template>
     <section>
         <div class="vantagem">
-            <img src="@/assets/icons/fast.svg" alt="">
+            <img src="@/assets/icons/fast_2.svg" alt="">
             <span>Rápido</span>
         </div>
 
         <div class="vantagem">
-            <img src="@/assets/icons/plant.svg" alt="">
+            <img src="@/assets/icons/plant_2.svg" alt="">
             <span>Sustentável</span>
         </div>
 
         <div class="vantagem">
-            <img src="@/assets/icons/lupa.svg" alt="">
+            <img src="@/assets/icons/lupa_2.svg" alt="">
             <span>Personalizado</span>
         </div>
 
@@ -26,10 +26,12 @@
     section {
         min-height: 100px;
         background: var(--firstColor);
+        
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1em;
+        padding-block: var(--padding);
 
         .vantagem {
             display: flex;
@@ -37,8 +39,15 @@
             justify-content: center;
             align-items: center;
 
+            
+
             img {
-                width: 30%;
+                width: 20%;
+                filter: brightness(0) invert(1);
+                @media (max-width: 800px) {
+                    width: 40%;
+                }
+                
             }
 
             span {

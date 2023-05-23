@@ -1,0 +1,9 @@
+import { pt } from '@formkit/i18n'
+import { DefaultConfigOptions } from '@formkit/vue'
+
+const config: DefaultConfigOptions = {
+  locales: { pt },
+  locale: 'pt',
+}
+
+export default config

@@ -1,7 +1,7 @@
 <template>
     <section>
         
-        <div id="topTransition"></div>
+        <!--<div id="topTransition"></div>-->
        
         <h2>O que precisas de saber sobre o cartão canelado</h2>
         <p>O papel conhecido como cartão canelado é um tipo mais espesso e resistente, que é comumente utilizado na conceção de caixas, podendo ter uma superfície lisa ou ondulada. Este material é produzido a partir de fibras de celulose, que podem ser virgens ou recicladas.</p>
@@ -17,7 +17,7 @@
 
 <style scoped lang="scss">
     section {
-        background: linear-gradient(0deg, rgba(0, 163, 212, 0.7), rgba(0, 163, 212, 0.7)), 
+        background: linear-gradient(0deg, #00629bd6, var(--secondColor)), 
         url("@/assets/bg1.jpg");
         background-position: center;
         background-size: cover;
@@ -31,8 +31,8 @@
         left: 0;
         width: 100%;
         height: 40px;
-        background: var(--firstColor);
-        background: linear-gradient(180deg, var(--firstColor) 50%, rgba(0, 163, 212, 0) 71.32%);
+        background: var(--secondColor);
+        background: linear-gradient(180deg, var(--secondColor) 50%, rgba(0, 163, 212, 0) 71.32%);
     }
 
     

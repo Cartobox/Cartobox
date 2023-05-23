@@ -1,14 +1,45 @@
 <template>
     <section ref="sec" id="produtos">
         <img src="@/assets/wave1.svg" alt="" id="bottomTransition">
-        <h2>Conheça os nossos produtos</h2>
+        <h2>Conheça alguns dos nossos produtos</h2>
 
 
         <div id="carrousel" class="noselect" ref="carrouselContainer">
             <div class="item-container" ref="itemCont">
-                <div class="item" v-for="i in 8">
-                    <img src="@/assets/box.png" alt="">
+
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_1.svg" alt="Modelo de caixa">
                 </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_2.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_3.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_4.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_5.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_6.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_7.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_8.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_9.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_10.svg" alt="Modelo de caixa">
+                </div>
+
+
+
             </div>
             <div class="carrouselBTN noSelect" @click="offsetCarrousel(250)"></div>
             <div class="carrouselBTN next noSelect" @click="offsetCarrousel(-250)"></div>
@@ -40,13 +71,13 @@
             const container = carrouselContainer.value as unknown as HTMLElement;
 
             container.addEventListener("pointerdown", (e) => {
-                console.log("down")
+                
                 carrouselSettings.scrollWidth = container.scrollWidth - container.offsetWidth;
                 carrouselSettings.width = container.offsetWidth;
                 
                 window.addEventListener("pointermove", handleMove);
                 window.addEventListener("pointerup", () => {
-                    console.log("up")
+                    
                     window.removeEventListener("pointermove", handleMove);
                     fixOffset();
                 }, {once: true})
@@ -57,7 +88,6 @@
     const itemCont = ref(null);
 
     const handleMove = (e: PointerEvent) => {
-        console.log("move")
         scrolled.value += e.movementX;
 
         const container = carrouselContainer.value as unknown as HTMLElement;
@@ -164,7 +194,7 @@
                 flex-shrink: 0;
                 width: var(--w);
                 height: calc(var(--w) * 1.5);
-                background: #f1f1f1;
+                background: transparent;
                 border-radius: 5px;
                 overflow: hidden;
             
@@ -221,7 +251,7 @@
         left: 0;
         width: 100%;
         height: auto;
-        transform: translateY(-100%);
+        transform: translateY(calc(-100% + 5px));
     }
 
     h2 {

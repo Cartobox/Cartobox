@@ -6,9 +6,9 @@
         </div>
         <div id="info-container">
             <h1>Encaixe o seu negócio à sua medida</h1>
-            <h4>Na cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada caixa.</h4>
+            <h4>Na cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada embalagem.</h4>
         </div>
-        <FormsButton>Faça a sua caixa</FormsButton>
+        <FormsButton>Encaixe a sua empresa</FormsButton>
     </section>
 </template>
 

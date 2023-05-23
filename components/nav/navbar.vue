@@ -1,13 +1,13 @@
 <template>
-    <div id="navContainer">
+    <div id="navContainer" :class="{menuOpen: MobileIsActive}">
         <nav class="noselect" :class="{scrolled: scrolledDown}">
             <div id="logo-area">
-                <img src="@/static/logo.svg" alt="" @click="navigateTo('/')">
+                <img src="@/static/logo.svg" alt="logo" @click="navigateTo('/')">
             </div>
             <div id="mobile-menu">
                 <img src="@/static/menu-icon.svg" alt="" @click="toggleMobile">
             </div>
-            <div id="nav-area" :class="{menuOpen: MobileIsActive}">
+            <div id="nav-area" :class="{menuOpen: MobileIsActive, scrolled: scrolledDown}">
                 <div class="pages" @click="MobileIsActive = false">
                     <span :class="{active: route.path === '/'}"><NuxtLink to="/">Inicio</NuxtLink></span>
                     <span :class="{active: route.path === '/sobrenos'}"><NuxtLink to="/sobrenos" >Quem somos</NuxtLink></span>
@@ -38,7 +38,7 @@
         document.addEventListener("scroll", () => {
             const scroll = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if (scroll > 50) scrolledDown.value = true;
+            if (scroll > 70) scrolledDown.value = true;
             else scrolledDown.value = false;
         })
     })
@@ -54,6 +54,10 @@
         top: 0;
         left: 0;
         z-index: 100;
+
+        &.menuOpen {
+            background: #fff;
+        }
     }
 
     a {
@@ -67,16 +71,18 @@
         
         width: 100%;
         height: var(--navH);
-        background: rgb(255, 255, 255);
+        
 
         padding-inline: var(--padding);
         transition: var(--transIn);
+        background: rgb(255, 255, 255);
         
         &.scrolled {
             --navH: 70px;
             -webkit-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
             -moz-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
             box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.38);
+            
         }
     }
 
@@ -84,6 +90,10 @@
         display: block;
         width: 100%;
         height: var(--navH);
+
+        .white {
+            filter: invert(1);
+        }
     }
 
     #nav-area {
@@ -97,6 +107,7 @@
             cursor: pointer;
             transition: var(--transOut);
             font-size: 1.3rem;
+            
 
             &.active {
                 color: var(--secondColor);
@@ -106,6 +117,12 @@
             &:not(.active):hover {
                 color: var(--secondColor); 
                 transition: var(--transIn);
+            }
+        }
+
+        &:not(.menuOpen):not(.scrolled).firstPage {
+            span {
+                color: #fff;
             }
         }
 
@@ -145,6 +162,7 @@
                     margin-top: .7em;
                 }
             }
+
         }
     }
 

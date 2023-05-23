@@ -55,6 +55,11 @@ export default defineNuxtConfig({
             ]
         }
     },
+    formkit: {
+        defaultConfig: true,
+        configFile: './formkit.config.ts',
+        // ^ this is now a full config replacement, not override.
+    },
 
     modules: [
         '@pinia/nuxt', 
