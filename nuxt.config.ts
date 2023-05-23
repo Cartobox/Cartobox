@@ -28,6 +28,8 @@ export default defineNuxtConfig({
                     name: 'og:image',
                     content:'https://i.ibb.co/Wxh3JGQ/OGImage.png',
                 },
+
+                
             ],
             htmlAttrs: {
                 lang: "pt"
