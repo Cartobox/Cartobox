@@ -403,11 +403,11 @@
             }   
 
             &::-webkit-scrollbar-track {
-                background-color: transparent;
+                background-color: #0000004c;
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: #fff;
+                background-color: #ffffffe2;
             }
 
             scrollbar-width: thin;
