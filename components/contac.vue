@@ -196,25 +196,35 @@
         document.body.style.overflow = 'visible';
     });
 
-    const submitHandler = (data: any) => {
+    const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+
+    const submitHandler = async (data: any) => {
         clearErrors("form");
         submitted.value = true
+            
+        const p = await new Promise(async (resolve, reject) => {
 
-        //@ts-ignore
-        grecaptcha.ready(function() {
             //@ts-ignore
-            grecaptcha.execute('6LclXzYmAAAAACni1BfBUnWJXg4Eb1b2KZ-8f4V5', {action: 'submit'}).then(function(token) {
-                data.token = token
-                axios.post('/.netlify/functions/sendEmail', data)
-                .then(function (response) {
-                    if (response.status === 200) reset("form");
-                })
-                .catch(function (error) {
-                    setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {
-                }) 
+            await grecaptcha.ready(async function() {
+                //@ts-ignore
+                await grecaptcha.execute('6LclXzYmAAAAACni1BfBUnWJXg4Eb1b2KZ-8f4V5', {action: 'submit'}).then(async function(token) {
+                    data.token = token
+                    await axios.post('/.netlify/functions/sendEmail', data)
+                    .then(function (response) {
+                        if (response.status === 200) reset("form");
+                    })
+                    .catch(function (error) {
+                        setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {}) 
+                        
+                });
+                resolve("OK")
             });
-          });
-        });
+            });
+            
+        }).then(() => {
+            return true
+        })
+        
 
         
     }

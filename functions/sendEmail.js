@@ -13,7 +13,7 @@ exports.handler = async (event, context, callback) => {
         }
     }
 
-    const Recipient = "cartobox.lda@gmail.com" //process.env.EMAIL
+    const Recipient = process.env.EMAIL 
 
     const error = false;
 
