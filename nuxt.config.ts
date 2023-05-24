@@ -17,6 +17,9 @@ export default defineNuxtConfig({
                 { rel: 'icon', type: 'image/png', href: '/favicon.png' },
                 { rel: 'canonical',  href: 'https://cartobox.pt/' },
             ],
+            script: [
+                {src: "https://www.google.com/recaptcha/api.js?render=6LclXzYmAAAAACni1BfBUnWJXg4Eb1b2KZ-8f4V5" }
+            ],
             meta: [
                 { name: 'description', content: 'Na Cartobox somos especialistas em cartas de cartão feitas a pensar especificamente no seu negócio.' },
                 { name: 'keywords', content: 'caixas,cartao,canelado,medida,negocio,caixas de cartao,impressao,quantidade,cartobox,negócio' },
@@ -28,8 +31,6 @@ export default defineNuxtConfig({
                     name: 'og:image',
                     content:'https://i.ibb.co/Wxh3JGQ/OGImage.png',
                 },
-
-                
             ],
             htmlAttrs: {
                 lang: "pt"

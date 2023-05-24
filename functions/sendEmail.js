@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 const { json } = require("stream/consumers");
+const axios = require("axios");
 
 exports.handler = async (event, context, callback) => {
     let data =  {}
@@ -12,6 +13,7 @@ exports.handler = async (event, context, callback) => {
         }
     }
 
+    const Recipient = "cartobox.lda@gmail.com" //process.env.EMAIL
 
     const error = false;
 
@@ -28,8 +30,9 @@ exports.handler = async (event, context, callback) => {
     const quantidade = data.quantidade || null
 
     const modelo = data.modelo || null
+    const token =  data.token || null
 
-    if (!senderEmail || !assunto || !nome || !empresa || !tel || !msg) error = true
+    if (!senderEmail || !assunto || !nome || !empresa || !tel || !msg || !token) error = true
     
 
     const transporter = nodemailer.createTransport({
@@ -43,10 +46,28 @@ exports.handler = async (event, context, callback) => {
     });
 
 
+    const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHAKEY}&response=${token}`, {}, 
+    {
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
+        },
+    })
+
+    console.log(response.data.success)
+
+    if(!response.data.success) {
+        console.log("Invalid captcha")
+        return {
+            statusCode: 500,
+            body: "Oops"
+        }
+    }
+
+
 
     let info = await transporter.sendMail({
         from: `"${nome}" <${process.env.EMAIL}>`,
-        to: `${process.env.EMAIL}`,
+        to: `${Recipient}`,
         subject: `${empresa} | ${assunto}`,
         text: `
             <b>${assunto}</b> \n

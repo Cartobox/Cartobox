@@ -134,7 +134,7 @@
                         name="mensagem"
                         rows="10"
                         placeholder="Escreva a sua mensagem para nós"
-                    />
+                    />                    
 
                     <FormKit
                         type="submit"
@@ -196,21 +196,27 @@
         document.body.style.overflow = 'visible';
     });
 
-    const submitHandler = async (data: any) => {
+    const submitHandler = (data: any) => {
         clearErrors("form");
-        // Let's pretend this is an ajax request:
-        await new Promise((r) => setTimeout(r, 1000))
         submitted.value = true
 
-        axios.post('/.netlify/functions/sendEmail', data)
-        .then(function (response) {
-            if (response.status === 200) reset("form");
-        })
-        .catch(function (error) {
-            setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {
-        })
-            
+        //@ts-ignore
+        grecaptcha.ready(function() {
+            //@ts-ignore
+            grecaptcha.execute('6LclXzYmAAAAACni1BfBUnWJXg4Eb1b2KZ-8f4V5', {action: 'submit'}).then(function(token) {
+                data.token = token
+                axios.post('/.netlify/functions/sendEmail', data)
+                .then(function (response) {
+                    if (response.status === 200) reset("form");
+                })
+                .catch(function (error) {
+                    setErrors('form', ['Não foi possível enviar o email, tente novamente!'], {
+                }) 
+            });
+          });
         });
+
+        
     }
 
     
