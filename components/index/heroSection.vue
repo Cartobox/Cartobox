@@ -2,13 +2,13 @@
     <section>
         <div id="background" class="noselect">
             <img src="@/assets/hero-section-bg.svg" alt="" class="bg-pattern">
-            <img src="@/assets/man-holding-boxes.png" alt="" class="hero">
+            <img src="@/assets/boxes.png" alt="" class="hero">
         </div>
         <div id="info-container">
-            <h1>Encaixe o seu negócio à sua medida</h1>
+            <h1>Embalagens à medida do seu negócio</h1>
             <h4>Na cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada embalagem.</h4>
         </div>
-        <FormsButton>Encaixe a sua empresa</FormsButton>
+        <FormsButton>Encontre a embalagem perfeita</FormsButton>
     </section>
 </template>
 

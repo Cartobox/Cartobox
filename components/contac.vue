@@ -166,7 +166,7 @@
                 <div class="item">
                     <img src="@/assets/icons/send.svg" alt="">
                     <span>                
-                        <b>Email:</b> comercial@cartobox.pt
+                        <b>Email:</b> geral@cartobox.pt
                     </span>
                 </div>
             </section>

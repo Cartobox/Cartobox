@@ -31,6 +31,7 @@ export default defineNuxtConfig({
                     name: 'og:image',
                     content:'https://i.ibb.co/Wxh3JGQ/OGImage.png',
                 },
+                { name: 'thumbnail', content: 'https://imgdb.net/storage/uploads/71349f7042bbca014dd01d3b3c7982eba5bc3c2aefc017bb0d8ff27183605fb7.png' },
             ],
             htmlAttrs: {
                 lang: "pt"

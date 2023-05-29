@@ -11,7 +11,7 @@
                 <p>244 545 380</p>
                 <p class="small">(chamada fixa nacional)</p>
                 <p>960 364 411</p>
-                <p>comercial@cartobox.pt</p>
+                <p>geral@cartobox.pt</p>
             </div>
             <div class="item">
                 <h4>Morada</h4>
