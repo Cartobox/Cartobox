@@ -29,7 +29,7 @@ export default defineNuxtConfig({
                 {
                     hid: 'og:image',
                     name: 'og:image',
-                    content:'https://i.ibb.co/Wxh3JGQ/OGImage.png',
+                    content:'https://imgdb.net/storage/uploads/2b690765a286aefdeed425c29ba567ea5e9419d6b34601214129646f2deb9efb.png',
                 },
                 { name: 'thumbnail', content: 'https://imgdb.net/storage/uploads/71349f7042bbca014dd01d3b3c7982eba5bc3c2aefc017bb0d8ff27183605fb7.png' },
             ],

@@ -6,6 +6,15 @@
 
         <div id="carrousel" class="noselect" ref="carrouselContainer">
             <div class="item-container" ref="itemCont">
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_12.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_11.svg" alt="Modelo de caixa">
+                </div>
+                <div class="item">
+                    <img src="@/assets/caixas/Caixa_13.svg" alt="Modelo de caixa">
+                </div>
 
                 <div class="item">
                     <img src="@/assets/caixas/Caixa_1.svg" alt="Modelo de caixa">

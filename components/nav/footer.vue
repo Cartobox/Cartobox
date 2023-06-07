@@ -7,11 +7,11 @@
                 <p>Fazemos caixas que são mesmo a cara da sua empresa!</p>
             </div>
             <div class="item">
-                <h4>contactos</h4>
+                <h4>Contactos</h4>
                 <p>244 545 380</p>
                 <p class="small">(chamada fixa nacional)</p>
                 <p>960 364 411</p>
-                <p>geral@cartobox.pt</p>
+                <p>cartobox@cartobox.pt</p>
             </div>
             <div class="item">
                 <h4>Morada</h4>

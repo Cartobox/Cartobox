@@ -3,9 +3,9 @@
         <div class="img-container"><div class="img"></div></div>
         <div class="panel">
             <div class="wrapper">
-                <h1>Desempacote a nossa história</h1>
+                <h1>Abra a caixa da nossa história</h1>
                 <div class="innerWrapper">
-                    <p>Estamos há mais de uma década ao seu lado e da sua empresa para encontrar a embalagem que é o rosto do seu negócio.</p>
+                    <p>Estamos há mais de uma década ao seu lado e da sua empresa para encontrar a embalagem que é a cara do seu negócio.</p>
                     <p>Na Cartobox acreditamos que todas as empresas são diferentes e como tal precisam de embalagens que representem os seus negócios e que possam acondicionar o melhor possível os seus produtos, seja no armazenamento ou no transporte.</p>
                 </div>
             </div>

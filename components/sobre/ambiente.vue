@@ -18,7 +18,7 @@
             </div>
         </div>
         <p>Estamos comprometidos em promover a sustentabilidade e a responsabilidade ambiental. Utilizamos materiais recicláveis e biodegradáveis nos nossos processos de produção, procurando minimizar o nosso impacto no meio ambiente. As nossas soluções de embalagem são projetadas para otimizar o uso de recursos, reduzir desperdícios e promover práticas de embalagem mais ecológicas.</p>
-        <p>Além disso, promovemos a consciência ambiental entre os nossos colaboradores, incentivando práticas de conservação de recursos e separação adequada de resíduos. Também colaboramos com fornecedores comprometidos com práticas sustentáveis, buscando estabelecer parcerias que promovam a responsabilidade ambiental em toda a cadeia produtiva.</p>
+        <p>Além disso, promovemos a consciência ambiental entre os nossos colaboradores, incentivando práticas de conservação de recursos e separação adequada de resíduos. Também colaboramos com fornecedores comprometidos com práticas sustentáveis, em busca de estabelecer parcerias que promovem a responsabilidade ambiental em toda a cadeia produtiva.</p>
         <p>Acreditamos que a sustentabilidade vai além da escolha de materiais e processos eco-friendly. Para isso, trabalhamos em conjunto com os nossos clientes para desenvolver embalagens personalizadas que atendam aos requisitos de proteção do produto, ao mesmo tempo em que priorizam a sustentabilidade.</p>
         
         <div id="sep"><span></span></div>

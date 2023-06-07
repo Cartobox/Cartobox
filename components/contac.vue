@@ -97,7 +97,7 @@
                                 'Fino castanho',
                                 'Fino com Kraft',
                                 'Cartão Largo Castanho',
-                                'Carão Duplo Castanho/branco',
+                                'Cartão Duplo Castanho/branco',
                                 'Outro (indique na mensagem)'
                             ]"
                         />
@@ -166,7 +166,7 @@
                 <div class="item">
                     <img src="@/assets/icons/send.svg" alt="">
                     <span>                
-                        <b>Email:</b> geral@cartobox.pt
+                        <b>Email:</b> cartobox@cartobox.pt
                     </span>
                 </div>
             </section>

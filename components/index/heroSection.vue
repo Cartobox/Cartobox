@@ -6,7 +6,7 @@
         </div>
         <div id="info-container">
             <h1>Embalagens à medida do seu negócio</h1>
-            <h4>Na cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada embalagem.</h4>
+            <h4>Na Cartobox procuramos responder às necessidades individuais de cada empresa, personalizando a impressão, dimensão e estrutura de cada embalagem.</h4>
         </div>
         <FormsButton>Encontre a embalagem perfeita</FormsButton>
     </section>
