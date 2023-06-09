@@ -33,7 +33,7 @@
             </div>
             <div class="item">
                 <div class="wrapper">
-                    <a href="https://www.facebook.com/profile.php?id=100092847426863" target="_blank"><img src="@/assets/icons/linkedIn.svg" alt="LinkedIn"/></a>
+                    <a href="https://www.linkedin.com/company/cartobox-lda/" target="_blank"><img src="@/assets/icons/linkedIn.svg" alt="LinkedIn"/></a>
                     <a href="https://www.facebook.com/profile.php?id=100092847426863" target="_blank"><img src="@/assets/icons/facebook.svg" alt="Facebook"/></a>
                     <a href="https://www.instagram.com/cartobox.lda/" target="_blank"><img src="@/assets/icons/instagram.svg" alt="Instagram"/></a>
                 </div>
