@@ -71,7 +71,7 @@
 
         @media (max-width: 980px) {
             grid-template-columns: 1fr;
-            --H: 110px;
+            --H: 130px;
         }
 
         .item {
@@ -130,7 +130,7 @@
                     content: '';
                     background: 
                         linear-gradient(0deg, var(--BGC), var(--BGC)),
-                        url("@/assets/cartao\ canelado\ micro.png");
+                        url("@/assets/CartaoCan.png");
                     background-size: cover;
                     background-position: center;
                 }
