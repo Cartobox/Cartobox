@@ -76,29 +76,29 @@
 
         .item {
             --opacity: .3;
-            --BGC: rgba(240, 102, 102, var(--opacity));
+            --BGC: rgba(0, 163, 212, var(--opacity));
             transition: .14s;
 
             display: block;
             position: relative;
             width: 100%;
             height: 100%;
-            height: var(--H);
+            min-height: var(--H);
 
             &:nth-child(2) {
-                --BGC: rgba(212, 240, 102, var(--opacity));
+                --BGC: rgba(37, 134, 174, var(--opacity));
             }
 
             &:nth-child(3) {
-                --BGC: rgba(21, 255, 86, var(--opacity));
+                --BGC: rgba(0, 84, 120, var(--opacity));
             }
 
             &:nth-child(4) {
-                --BGC: rgba(240, 102, 234, var(--opacity));
+                --BGC: rgba(117, 212, 252, var(--opacity));
             }
 
             &:nth-child(5) {
-                --BGC: rgba(240, 201, 102, var(--opacity));
+                --BGC: rgba(117, 188, 218, var(--opacity));
             }
 
             
@@ -137,20 +137,20 @@
 
                 .nome {
                 position: absolute;
-                top: 5%;
+                top: 15%;
                 left: 0;
                 padding-inline: 1em;
-                padding-block: 1em;
+                padding-block: .7em;
                 padding-right: 2em;
-                background: var(--firstColor);
-                background: linear-gradient(90deg, rgba(0, 163, 212, 0.65) 80.5%, rgba(0, 163, 212, 0) 96.1%);
-                color: #fff;
+                background: #fff;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 90.5%, rgba(255, 255, 255, 0) 96.1%);
+                color: #000;
                 }
                 
                 p {
                     display: block;
                     position: absolute;
-                    top: 30%;
+                    top: 40%;
                     color: #fff;
                     text-align: left;
                     padding-inline: 1em;
@@ -186,6 +186,7 @@
     
     .item:hover {
         --opacity: .45 !important;
+        --BGC: rgba(0, 163, 212, var(--opacity)) !important;
         p {
             opacity: 1 !important;
         }
