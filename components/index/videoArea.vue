@@ -50,6 +50,10 @@
             max-width: 50%;
             margin: auto;
             margin-top: 5em;
+
+            @media (max-width: 800px) {
+                width: 100%;
+            }
         }
 
         border-radius: .7rem;
