@@ -4,6 +4,7 @@
         <IndexVantagens></IndexVantagens>
         <IndexSobreoCartao></IndexSobreoCartao>
         <IndexProdutos></IndexProdutos>
+        <IndexVideoArea></IndexVideoArea>
         <IndexTiposcartao></IndexTiposcartao>
         <IndexMap></IndexMap>
     </div>

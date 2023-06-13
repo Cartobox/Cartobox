@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     runtimeConfig: {
-        baseURL: process.env.NUXT_BASE_URL + "/assets/ogImage.png"
+        baseURL: process.env.NUXT_BASE_URL + "/assets/ogImage.png",
+        public: {
+            videoURL: process.env.VIDEOLINK,
+        }
     },
     app: {
         head: {
