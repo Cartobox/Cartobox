@@ -85,20 +85,69 @@
             height: 100%;
             min-height: var(--H);
 
+            &:nth-child(1) {
+                --BGC: rgba(117, 188, 218, var(--opacity));
+
+                .wrapper {
+                    &::before {
+                        background:
+                        url("@/assets/tipos/c_canmicro.png");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+            }
+
             &:nth-child(2) {
                 --BGC: rgba(37, 134, 174, var(--opacity));
+
+                .wrapper {
+                    &::before {
+                        background:
+                        url("@/assets/tipos/fino.png");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
             }
 
             &:nth-child(3) {
                 --BGC: rgba(0, 84, 120, var(--opacity));
+
+                .wrapper {
+                    &::before {
+                        background:
+                        url("@/assets/tipos/c_LargoCan.png");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
             }
 
             &:nth-child(4) {
                 --BGC: rgba(117, 212, 252, var(--opacity));
+
+                .wrapper {
+                    &::before {
+                        background:
+                        url("@/assets/tipos/c_canDuplo.png");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
             }
 
             &:nth-child(5) {
                 --BGC: rgba(117, 188, 218, var(--opacity));
+
+                .wrapper {
+                    &::before {
+                        background:
+                        url("@/assets/tipos/c_duplomicro.png");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
             }
 
             
@@ -128,9 +177,9 @@
                     width: 100%;
                     height: 100%;
                     content: '';
-                    background: 
+                    /*background: 
                         linear-gradient(0deg, var(--BGC), var(--BGC)),
-                        url("@/assets/CartaoCan.png");
+                        url("@/assets/CartaoCan.png");*/
                     background-size: cover;
                     background-position: center;
                 }
