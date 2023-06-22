@@ -31,7 +31,7 @@
             bottom: 0;
             right: 2%;
             width: auto;
-            height: 97%;
+            height: 90%;
 
             @media (max-width: 560px) {
                 height: 65%;
@@ -52,7 +52,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: 70%;
+        width: 59%;
         margin-bottom: 1em;
 
         @media (max-width: 950px) {
