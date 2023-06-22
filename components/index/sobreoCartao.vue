@@ -9,7 +9,7 @@
 
         <p>O cartão canelado é composto pela junção de folhas de papel planas com folhas de papel ondulado (caneluras que se colocam na parte interior).</p>
         <img src="@/assets/cartaoCanProcess.svg" alt="Constituição do papel canelado" id="cc">
-        <p>De camada simples, dupla ou tripla, são várias as combinações de papel que podem ser utilizadas na produção do cartão canelado que resultam em várias variantes com diferentes graus de flexibilidade e resistência tornando-o um material de eleição quando o objetivo é proteção, transporte ou promoção de produtos.</p>
+        <p>Em cartão simples ou duplo, são várias as combinações de papel que podem ser utilizadas na produção do cartão canelado que resultam em várias variantes com diferentes graus de flexibilidade e resistência tornando-o um material de eleição quando o objetivo é proteção, transporte ou promoção de produtos.</p>
         <p>Feito a partir de fontes naturais e renováveis, o cartão canelado é um aliado contra a devastação florestal. Tem um dos melhores índices de recuperação e reciclagem comparado com qualquer outro tipo de material de embalagens.</p>
         <p></p>
     </section>

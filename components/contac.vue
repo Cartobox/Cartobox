@@ -92,13 +92,12 @@
                             label="Tipo de Cartão"
                             name="tipocartao"
                             :options="[
-                                'Não tenho a certeza',
-                                'Micro Branco/castanho',
-                                'Fino castanho',
-                                'Fino com Kraft',
-                                'Cartão Largo Castanho',
-                                'Cartão Duplo Castanho/branco',
-                                'Outro (indique na mensagem)'
+                                'Micro',
+                                'Fino',
+                                'Largo',
+                                'Duplo',
+                                'Duplo Micro',
+                                'Outro'
                             ]"
                         />
                         
