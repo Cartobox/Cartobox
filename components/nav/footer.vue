@@ -27,6 +27,7 @@
             <span class="link"><NuxtLink to="/politica-privacidade">Política de privacidade</NuxtLink></span>
             <span class="link"><NuxtLink to="/politica-cookies">Política de cookies</NuxtLink></span>
         </div>
+        <div id="projeto"> <NuxtLink to="https://drive.google.com/file/d/1Aa_FXsQo5cw6hKQvzCiKalEPL3504ti4/view?usp=sharing" target="_blank">Ficha de projeto - Apoio à Produção Nacional</NuxtLink> </div>
         <div id="rodape">
             <div class="item">
                 <span>Cartobox</span><span class="link"><NuxtLink to="https://www.livroreclamacoes.pt/" target="_blank">Livro de reclamações</NuxtLink></span>
@@ -126,7 +127,7 @@
         left: 0;
     }
 
-    #policy {
+    #policy, #projeto {
         display: block;
         margin-top: 3em;
         color: #fff;
@@ -153,6 +154,11 @@
                 margin-top: 1em;
             }
         }
+    }
+
+    #projeto a {
+        font-weight: 300;
+        cursor: pointer;
     }
 
     .link {
