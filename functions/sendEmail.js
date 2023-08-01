@@ -36,7 +36,7 @@ exports.handler = async (event, context, callback) => {
     
 
     const transporter = nodemailer.createTransport({
-        host: "smtp.ptempresas.pt",
+        host: "smtp.gmail.com",
         port: 587,
         secure: false,
         auth: {
