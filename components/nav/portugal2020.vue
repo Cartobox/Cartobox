@@ -11,8 +11,6 @@
 <style scoped lang="scss">
     section {
         min-height: 50px;
-        max-height: 120px;
-     
         display: flex;
         width: 100%;
         background: #fff;
@@ -23,7 +21,7 @@
             display: block;
             height: 100%;
             width: auto;
-            max-height: 50px;
+            max-height: 120px;
 
             @media (max-width: 800px) {
                 width: 100%;
