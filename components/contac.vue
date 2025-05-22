@@ -410,7 +410,7 @@ section {
         }
 
         scrollbar-width: thin;
-        scrollbar-color: #e0e0e0;
+        scrollbar-color: transparent #e0e0e0;
     }
 
     .right {

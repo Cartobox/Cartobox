@@ -9,12 +9,16 @@
             <div class="download-wrapper">
                 <div
                     class="item"
-                    @click="openCert('@/assets/cadeia_responsabilidade.pdf')"
+                    @click="
+                        openCert(
+                            'https://drive.google.com/file/d/1QZhiz0r2QveKYCvh_ecBz3qcUL8TDDU7/view?usp=sharing'
+                        )
+                    "
                 >
-                    <span>Política da Cadeira<br />de Responsabilidade</span>
+                    <span>Política da Cadeia<br />de Responsabilidade</span>
                     <img
                         src="@/assets/icons/download.svg"
-                        alt="downlaod certificado ponto verde"
+                        alt="downlaod politica da cadeia de responsabilidade"
                     />
                 </div>
                 <div
