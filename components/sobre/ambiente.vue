@@ -5,73 +5,45 @@
         </div>
         <h2>O nosso compromisso com o ambiente</h2>
         <div id="certificados">
-            <img src="@/assets/pontoVerde.svg" alt="Logo ponto verde" />
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="@/assets/FSC_Logo_White.svg" alt="FSC Logo" />
+                    <img src="@/assets/pontoVerde.svg" alt="Logo ponto verde" />
+                </div>
+            </div>
             <div class="download-wrapper">
-                <div
-                    class="item"
-                    @click="
-                        openCert(
-                            'https://drive.google.com/file/d/1QZhiz0r2QveKYCvh_ecBz3qcUL8TDDU7/view?usp=sharing'
-                        )
-                    "
-                >
+                <div class="item" @click="openCert('https://drive.google.com/file/d/1QZhiz0r2QveKYCvh_ecBz3qcUL8TDDU7/view?usp=sharing')">
                     <span>Política da Cadeia<br />de Responsabilidade</span>
-                    <img
-                        src="@/assets/icons/download.svg"
-                        alt="downlaod politica da cadeia de responsabilidade"
-                    />
+                    <img src="@/assets/icons/download.svg" alt="downlaod politica da cadeia de responsabilidade" />
                 </div>
-                <div
-                    class="item"
-                    @click="
-                        openCert(
-                            'https://drive.google.com/file/d/1fkWGf6nxLpBxj3_p6R42-iu7kyYedbOH/view?usp=sharing'
-                        )
-                    "
-                >
+                <div class="item" @click="openCert('https://drive.google.com/file/d/1fkWGf6nxLpBxj3_p6R42-iu7kyYedbOH/view?usp=sharing')">
                     <span>Certificado<br />ponto verde</span>
-                    <img
-                        src="@/assets/icons/download.svg"
-                        alt="downlaod certificado ponto verde"
-                    />
+                    <img src="@/assets/icons/download.svg" alt="downlaod certificado ponto verde" />
                 </div>
-                <div
-                    class="item"
-                    @click="
-                        openCert(
-                            'https://drive.google.com/file/d/1qGxuWvxmt-UfFShlX9YLP-m-RHUn8RW9/view?usp=sharing'
-                        )
-                    "
-                >
+                <div class="item" @click="openCert('https://drive.google.com/file/d/1qGxuWvxmt-UfFShlX9YLP-m-RHUn8RW9/view?usp=sharing')">
                     <span>Declaração<br />pegada de carbono evitada</span>
-                    <img
-                        src="@/assets/icons/download.svg"
-                        alt="downlaod Declaração de pegada de carbono evitada"
-                    />
+                    <img src="@/assets/icons/download.svg" alt="downlaod Declaração de pegada de carbono evitada" />
                 </div>
             </div>
         </div>
         <p>
-            Estamos comprometidos em promover a sustentabilidade e a
-            responsabilidade ambiental. Utilizamos materiais recicláveis e
-            biodegradáveis nos nossos processos de produção, procurando
-            minimizar o nosso impacto no meio ambiente. As nossas soluções de
-            embalagem são projetadas para otimizar o uso de recursos, reduzir
-            desperdícios e promover práticas de embalagem mais ecológicas.
+            A Cartobox tem o compromisso em implementar e manter a Gestão da Cadeia de Responsabilidade de acordo com os requisitos das normas do
+            FSC®, através da escolha e utilização de produtos certificados FSC® na produção de alguns dos produtos que comercializa. Consulte-nos para
+            obter o vosso produto FSC.
         </p>
         <p>
-            Além disso, promovemos a consciência ambiental entre os nossos
-            colaboradores, incentivando práticas de conservação de recursos e
-            separação adequada de resíduos. Também colaboramos com fornecedores
-            comprometidos com práticas sustentáveis, em busca de estabelecer
-            parcerias que promovem a responsabilidade ambiental em toda a cadeia
-            produtiva.
+            Estamos comprometidos em promover a sustentabilidade e a responsabilidade ambiental. Utilizamos materiais recicláveis e biodegradáveis nos
+            nossos processos de produção, procurando minimizar o nosso impacto no meio ambiente. As nossas soluções de embalagem são projetadas para
+            otimizar o uso de recursos, reduzir desperdícios e promover práticas de embalagem mais ecológicas.
         </p>
         <p>
-            Acreditamos que a sustentabilidade vai além da escolha de materiais
-            e processos eco-friendly. Para isso, trabalhamos em conjunto com os
-            nossos clientes para desenvolver embalagens personalizadas que
-            atendam aos requisitos de proteção do produto, ao mesmo tempo em que
+            Além disso, promovemos a consciência ambiental entre os nossos colaboradores, incentivando práticas de conservação de recursos e separação
+            adequada de resíduos. Também colaboramos com fornecedores comprometidos com práticas sustentáveis, em busca de estabelecer parcerias que
+            promovem a responsabilidade ambiental em toda a cadeia produtiva.
+        </p>
+        <p>
+            Acreditamos que a sustentabilidade vai além da escolha de materiais e processos eco-friendly. Para isso, trabalhamos em conjunto com os
+            nossos clientes para desenvolver embalagens personalizadas que atendam aos requisitos de proteção do produto, ao mesmo tempo em que
             priorizam a sustentabilidade.
         </p>
 
@@ -96,15 +68,25 @@ function openCert(link: string) {
         margin-inline: auto;
         padding-bottom: 2em;
     }
-
-    .download-wrapper {
-        display: flex;
-        flex-direction: row;
+    .logo-wrapper {
+        display: grid;
+        align-items: center;
         justify-content: center;
-        column-gap: 20%;
-
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         @media (max-width: 600px) {
+            display: flex;
             flex-direction: column;
+            justify-content: center;
+            row-gap: 2em;
+        }
+    }
+    .download-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             row-gap: 2em;
         }
 
@@ -175,12 +157,7 @@ section {
     background: var(--secondColor);
     padding-top: 3em;
 
-    background: linear-gradient(
-            0deg,
-            rgba(0, 99, 155, 0.76),
-            rgba(0, 99, 155, 0.76)
-        ),
-        url("@/assets/ocean_bg.png");
+    background: linear-gradient(0deg, rgba(0, 99, 155, 0.76), rgba(0, 99, 155, 0.76)), url("@/assets/ocean_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
