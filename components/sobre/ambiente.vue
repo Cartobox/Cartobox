@@ -7,7 +7,7 @@
         <div id="certificados">
             <div class="logo-container">
                 <div class="logo-wrapper">
-                    <img src="@/assets/FSC_Logo_White.svg" alt="FSC Logo" />
+                    <img style="max-width: 150px" src="@/assets/FSC_Logo.svg" alt="FSC Logo" />
                     <img src="@/assets/pontoVerde.svg" alt="Logo ponto verde" />
                 </div>
             </div>
@@ -28,7 +28,7 @@
         </div>
         <p>
             A Cartobox tem o compromisso em implementar e manter a Gestão da Cadeia de Responsabilidade de acordo com os requisitos das normas do
-            FSC®, através da escolha e utilização de produtos certificados FSC® na produção de alguns dos produtos que comercializa. Consulte-nos para
+            FSC®, através da escolha e utilização de produtos certificados FSC na produção de alguns dos produtos que comercializa. Consulte-nos para
             obter o vosso produto FSC.
         </p>
         <p>
