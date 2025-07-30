@@ -8,11 +8,11 @@
             <div class="logo-container">
                 <div class="logo-wrapper">
                     <img style="max-width: 150px" src="@/assets/FSC_Logo.svg" alt="FSC Logo" />
-                    <img src="@/assets/pontoVerde.svg" alt="Logo ponto verde" />
+                    <img src="@/assets/pontoVerde.svg" alt="Logo ponto verde" style="filter: invert(1)" />
                 </div>
             </div>
             <div class="download-wrapper">
-                <div class="item" @click="openCert('https://drive.google.com/file/d/1QZhiz0r2QveKYCvh_ecBz3qcUL8TDDU7/view?usp=sharing')">
+                <div class="item" @click="openCert('https://drive.google.com/file/d/1By_tXPZn5Z8-zI0I6bV1RoWZAKjTgOes/view?usp=sharing')">
                     <span>Política da Cadeia<br />de Responsabilidade</span>
                     <img src="@/assets/icons/download.svg" alt="downlaod politica da cadeia de responsabilidade" />
                 </div>
@@ -108,7 +108,7 @@ function openCert(link: string) {
 
             img {
                 max-width: 40px;
-                filter: invert(1);
+
                 padding-top: 2em;
                 cursor: pointer;
             }
@@ -157,17 +157,15 @@ section {
     background: var(--secondColor);
     padding-top: 3em;
 
-    background: linear-gradient(0deg, rgba(0, 99, 155, 0.76), rgba(0, 99, 155, 0.76)), url("@/assets/ocean_bg.png");
+    background: linear-gradient(0deg, rgba(0, 98, 155, 0.925), rgba(0, 99, 155, 0.925)), url("@/assets/background_tree.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    color: #fff;
 }
 
 h2 {
     text-align: center;
-    color: #fff;
+    color: black;
 }
 
 p {
